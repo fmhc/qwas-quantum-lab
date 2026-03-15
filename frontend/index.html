@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QWAS - Quantum Wave Amplification & Sensing Research Lab. Exploring optical cooling, quantum sensing, and precision measurement.">
+  <title>QWAS | Quantum Research Lab</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <div id="app">
+    <canvas id="quantum-canvas"></canvas>
+
+    <nav class="nav">
+      <div class="nav-logo">QWAS</div>
+      <div class="nav-links">
+        <a href="#experiments">Experiments</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <button class="nav-menu" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <main>
+      <section id="hero" class="section hero">
+        <div class="hero-content">
+          <h1 class="hero-title">
+            <span class="hero-line">We are</span>
+            <span class="hero-line accent">cooling the future</span>
+          </h1>
+          <p class="hero-subtitle">Quantum Wave Amplification & Sensing</p>
+          <p class="hero-description">
+            Pushing the boundaries of optical cooling, quantum sensing, and precision measurement.
+            Where photons meet atoms at the edge of absolute zero.
+          </p>
+          <div class="hero-cta">
+            <a href="#experiments" class="btn btn-primary">Explore Our Work</a>
+            <a href="#contact" class="btn btn-secondary">Get Involved</a>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <span>Scroll to explore</span>
+          <div class="scroll-line"></div>
+        </div>
+      </section>
+
+      <section id="experiments" class="section experiments-section">
+        <div class="container">
+          <h2 class="section-title">Interactive Experiments</h2>
+          <p class="section-subtitle">Click on any experiment to explore the quantum physics in action</p>
+          <div class="experiments-grid" id="experiments-grid"></div>
+        </div>
+      </section>
+
+      <section id="research" class="section research-section">
+        <div class="container">
+          <h2 class="section-title">Published Research</h2>
+          <p class="section-subtitle">Peer-reviewed papers and foundational work in quantum physics</p>
+          <div class="research-grid" id="research-grid"></div>
+        </div>
+      </section>
+
+      <section id="contact" class="section cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2 class="section-title">Join Our Research</h2>
+            <p class="section-subtitle">Interested in funding, collaboration, or learning more?</p>
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name *</label>
+                  <input type="text" id="name" name="name" required minlength="2" maxlength="100">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email *</label>
+                  <input type="email" id="email" name="email" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="organization">Organization</label>
+                <input type="text" id="organization" name="organization" maxlength="200">
+              </div>
+              <div class="form-group">
+                <label for="interest_type">I'm interested in *</label>
+                <select id="interest_type" name="interest_type" required>
+                  <option value="">Select an option</option>
+                  <option value="funding">Funding opportunities</option>
+                  <option value="collaboration">Research collaboration</option>
+                  <option value="learn">Learning more</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" maxlength="2000"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-text">Send Message</span>
+                <span class="btn-loading">Sending...</span>
+              </button>
+            </form>
+            <div id="form-success" class="form-success hidden">
+              <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                  <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                </svg>
+              </div>
+              <h3>Thank you!</h3>
+              <p>We'll be in touch soon.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-brand">
+            <span class="footer-logo">QWAS</span>
+            <p>Quantum Wave Amplification & Sensing</p>
+          </div>
+          <div class="footer-links">
+            <a href="https://www.desy.de/research/photon_science/index_eng.html" target="_blank" rel="noopener">DESY</a>
+            <a href="https://www.physik.uni-hamburg.de/en/ilp.html" target="_blank" rel="noopener">UHH Laser Physics</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>2024 QWAS Research Lab. Hamburg, Germany.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div id="experiment-modal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" aria-label="Close">&times;</button>
+        <div class="modal-header">
+          <h3 class="modal-title"></h3>
+          <p class="modal-description"></p>
+        </div>
+        <div class="modal-canvas-container">
+          <canvas id="experiment-canvas"></canvas>
+        </div>
+        <div class="modal-controls">
+          <p class="modal-hint"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
