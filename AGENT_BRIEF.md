@@ -143,3 +143,13 @@ The site will be deployed as:
 ## When Done
 1. git add -A && git commit -m "feat: initial QWAS quantum lab" && git push -u origin main
 2. Run: openclaw system event --text "Done: QWAS Quantum Lab built and pushed to GitLab. Three.js + PocketBase + Docker Compose. Ready for Coolify deploy." --mode now
+
+## Coolify Deployment Details (CORRECTED)
+- **Coolify API Token:** `16|8c8932aab2011f7ca6b813175e2bcf16fb5635c3d25d7af24bb305b081767833`
+- **Coolify Base URL:** `https://coolify.callthe.dev/api/v1`
+- **Server UUID for callthe.dev:** `iskcwo008wkk4sswg80gkowo`
+- **Target domain:** `qwas.callthe.dev`
+- **Create new project:** POST `/projects` with name "qwas-quantum-lab"
+- **Deploy via:** Docker Compose from GitLab private repo
+- **GitLab HTTP:** `http://t480.fritz.box:8929/root/qwas-quantum-lab.git`
+- **GitLab Token:** `glpat-vjqVBTaRHhi3oMsr7UMH3m86MQp1OjEH.01.0w02lra1k`
