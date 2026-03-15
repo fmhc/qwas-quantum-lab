@@ -62,7 +62,7 @@ export function createResearchSection() {
       <h3 class="research-title">${paper.title}</h3>
       <p class="research-authors">${paper.authors} - ${paper.journal}</p>
       <a href="${paper.link}" target="_blank" rel="noopener noreferrer" class="research-link">
-        Read Paper
+        View Source
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M7 17L17 7M17 7H7M17 7V17"/>
         </svg>
